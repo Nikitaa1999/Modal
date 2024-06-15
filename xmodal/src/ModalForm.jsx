@@ -49,10 +49,10 @@ const ModalForm = () => {
   };
 
   return (
-    <div>
+    <div className='modal'>
     <h1>User Details Modal</h1>
       <button onClick={openModal}>Open Form</button>
-      <div className='modal'>
+     
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Example Modal">
       <div className='modal-content'>
         <h2>Fill Details</h2>
@@ -106,7 +106,7 @@ const ModalForm = () => {
         </form>
         </div>
       </Modal>
-      </div>
+      
     </div>
   );
 };
