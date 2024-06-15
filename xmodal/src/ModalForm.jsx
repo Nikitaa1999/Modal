@@ -57,51 +57,27 @@ const ModalForm = () => {
       <div className='modal-content'>
         <h2>Fill Details</h2>
         <form onSubmit={handleSubmit}>
-          <div>
-            <label>Username:</label>
-            <input
-              type="text"
-              id='username'
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
+          
+          <div className="input-group">
+                <label htmlFor="username">Username: </label>
+                <input type="text" name="username" id="username" onChange={(e)=>setName(e.target.value)}/>
+        </div>
             {/* {errors.name && <span>{errors.name}</span>} */}
-          </div>
-          <div>
-            <label>Email Address:</label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            {/* {errors.email && <span>{errors.email}</span>} */}
-          </div>
-          <div>
-            <label>Phone Number:</label>
-            <input
-              type="text"
-              id='phone'
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
-            />
-            {/* {errors.email && <span>{errors.email}</span>} */}
-          </div>
-          <div>
-            <label>Birthdate:</label>
-            <input
-              type="date"
-              id='dob'
-              value={birthdate}
-              onChange={(e) => setBirthdate(e.target.value)}
-              required
-            />
-            {/* {errors.birthdate && <span>{errors.birthdate}</span>} */}
-          </div>
-          <button id="submit-button" type="submit">Submit</button>
+          
+            <div className="input-group">
+                <label htmlFor="email">Email Address:</label>
+                <input type="email" name="email" id="email" onChange={(e)=>setEmail(e.target.value)} required />
+              </div>
+              <div className="input-group">
+                <label htmlFor="phoneNo">Phone Number:</label>
+                <input type="number" name="phoneNo" id="phone" onChange={(e)=>setPhone(e.target.value)} required />
+              </div>
+              <div className="input-group">
+                <label htmlFor="dob">Date of Birth:</label>
+                <input type="date" name="dob" id="dob" onChange={(e)=>setBirthdate(e.target.value)} />
+              </div>
+          
+          <button className="submit-button" type="submit">Submit</button>
           
         </form>
         </div>
