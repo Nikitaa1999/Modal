@@ -49,9 +49,10 @@ const ModalForm = () => {
   };
 
   return (
-    <div className='modal'>
+    <div>
     <h1>User Details Modal</h1>
       <button onClick={openModal}>Open Form</button>
+      <div className='modal'>
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Example Modal">
       <div className='modal-content'>
         <h2>Fill Details</h2>
@@ -71,7 +72,7 @@ const ModalForm = () => {
             <label>Email Address:</label>
             <input
               type="email"
-              id='email'
+              id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -100,11 +101,12 @@ const ModalForm = () => {
             />
             {/* {errors.birthdate && <span>{errors.birthdate}</span>} */}
           </div>
-          <button type="submit">Submit</button>
-          <button type="button" onClick={closeModal}>Close</button>
+          <button id="submit-botton" type="submit">Submit</button>
+          
         </form>
         </div>
       </Modal>
+      </div>
     </div>
   );
 };
