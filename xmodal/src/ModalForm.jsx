@@ -101,7 +101,7 @@ const ModalForm = () => {
             />
             {/* {errors.birthdate && <span>{errors.birthdate}</span>} */}
           </div>
-          <button id="submit-botton" type="submit">Submit</button>
+          <button id="submit-button" type="submit">Submit</button>
           
         </form>
         </div>
