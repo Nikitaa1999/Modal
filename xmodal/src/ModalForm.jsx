@@ -49,11 +49,12 @@ const ModalForm = () => {
   };
 
   return (
-    <div className='modal'>
+    <div className>
     <h1>User Details Modal</h1>
       <button onClick={openModal}>Open Form</button>
      
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Example Modal">
+      <div className='modal'>
       <div className='modal-content'>
         <h2>Fill Details</h2>
         <form onSubmit={handleSubmit}>
@@ -80,6 +81,7 @@ const ModalForm = () => {
           <button className="submit-button" type="submit">Submit</button>
           
         </form>
+        </div>
         </div>
       </Modal>
       
